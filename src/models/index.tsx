@@ -5,3 +5,5 @@ export interface IExchangeRate {
   currency: string;
   rate: number;
 }
+
+export type TCurrency = string;
