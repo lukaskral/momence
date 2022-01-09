@@ -1,6 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
 import { Header } from "./Header";
+import { ExchangeRates } from "./ExchangeRates";
+
+import { rates } from "./__mocks__/rates";
 
 const AppContainer = Styled.div`
 `;
@@ -17,7 +20,9 @@ export function App() {
   return (
     <AppContainer>
       <Header />
-      <AppContent>Hello world</AppContent>
+      <AppContent>
+        <ExchangeRates rates={rates} />
+      </AppContent>
     </AppContainer>
   );
 }
