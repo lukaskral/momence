@@ -9,3 +9,7 @@
 3. Připoj jednoduchý formulář, do kterého uživatel zadá částku v CZK a po stisknutí tlačítka mu zobrazí přepočet na jím zvolenou měnu s využitím aktuálního kurzu.
 4. Kód commituj průběžně. Výsledek nahraj na GitHub nebo jiné úložiště.
 5. Tech. stack - React (+ Hooks), TypeScript, Styled Components, React Query
+
+## Result
+
+![image info](./assets/screenshot.png)
