@@ -52,7 +52,9 @@ export function parseExchangRate(
 export function parseExchangeRates(text: string): IExchangeRate[] {
   const lines = text.split("\n");
 
-  let signature = lines.shift();
+  // first line contains release date, we don't have use for it right now so we throw it away
+  lines.shift();
+
   let cols =
     lines
       .shift()
