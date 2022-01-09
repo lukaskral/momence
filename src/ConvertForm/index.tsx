@@ -58,7 +58,7 @@ export function ConvertForm({ rates, currencies }: ConvertFormProps) {
 
   const onSubmit = useCallback(
     (values) => {
-      const value = parseFloat(values.value);
+      const value = parseFloat(values.value.replace(",", ".").replace(" ", ""));
       const rate = rates.find((r) => r.code === values.currency);
       if (!rate) {
         setConvertedValue(undefined);
@@ -81,7 +81,7 @@ export function ConvertForm({ rates, currencies }: ConvertFormProps) {
       {({ submitForm }) => (
         <FormContainer>
           <label>
-            <Field name="value" /> CZK
+            <Field name="value" /> <span>CZK</span>{" "}
             <ErrorMessage name="value" />
           </label>
           <label>
