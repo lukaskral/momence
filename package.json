@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "check": "yarn test && yarn prettier --check"
+    "check": "yarn test && yarn prettier --check && yarn tsc --noEmit"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
