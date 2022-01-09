@@ -28,9 +28,9 @@ export function ExchangeRates({ rates }: IExchangeRatesProps) {
         </tr>
       </thead>
       <tbody>
-        {rates.map((rate) => (
-          <TableRow key={rate.code} {...rate} />
-        ))}
+        {rates
+          ? rates.map((rate) => <TableRow key={rate.code} {...rate} />)
+          : null}
       </tbody>
     </Table>
   );
