@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { Field, Formik, FormikErrors, ErrorMessage } from "formik";
 import Styled from "styled-components";
 
-import { TCurrency, IExchangeRate } from "../models";
+import { TCurrency, IExchangeRate } from "../../models";
 
 const FormContainer = Styled.div`
     border: solid 1px #ccc;

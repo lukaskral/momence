@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-import { IExchangeRate } from "../models";
+import { IExchangeRate } from "../../models";
 import { TableRow } from "./TableRow";
 
 const Table = Styled.table`

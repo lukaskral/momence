@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import Styled from "styled-components";
 
-import { Header } from "../Header";
-import { ExchangeRates } from "../ExchangeRates";
-import { ConvertForm } from "../ConvertForm";
-import { Loading } from "../Loading";
+import { Header } from "../components/Header";
+import { ExchangeRates } from "../components/ExchangeRates";
+import { ConvertForm } from "../components/ConvertForm";
+import { Loading } from "../components/Loading";
 import { useExchangeRates } from "../data/rates";
 import { TCurrency } from "../models";
 

@@ -2,8 +2,8 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { ConvertForm } from ".";
 
-import { rates } from "../__fixtures__/rates";
-import { currencies } from "../__fixtures__/curencies";
+import { rates } from "../../__fixtures__/rates";
+import { currencies } from "../../__fixtures__/curencies";
 
 describe("ConvertForm", () => {
   it("computes converted value", async () => {
