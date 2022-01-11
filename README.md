@@ -1,6 +1,6 @@
 # Momence Currency App
 
-[![Build](https://github.com/lukaskral/momence/actions/workflows/node.js.yml/badge.svg)](https://github.com/lukaskral/momence/actions/workflows/nodejs.yml)
+[![Build](https://github.com/lukaskral/momence/actions/workflows/node.js.yml/badge.svg)](https://github.com/lukaskral/momence/actions/workflows/node.js.yml)
 
 1. Po svém startu stáhne aktuální kurzovní lístek z webu České Národní Banky.
    API URL: http://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt
