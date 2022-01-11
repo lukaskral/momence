@@ -7,5 +7,10 @@ const LoadingContainer = Styled.div`
 `;
 
 export function Loading() {
-  return <LoadingContainer>Loading&hellip;</LoadingContainer>;
+  return (
+    <LoadingContainer>
+      <span>Loading</span>
+      <span>&hellip;</span>
+    </LoadingContainer>
+  );
 }

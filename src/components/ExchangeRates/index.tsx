@@ -27,7 +27,7 @@ export function ExchangeRates({ rates }: IExchangeRatesProps) {
           <HeaderCell>Rate</HeaderCell>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-testid="exchange-rate-list">
         {rates
           ? rates.map((rate) => <TableRow key={rate.code} {...rate} />)
           : null}

@@ -1,4 +1,4 @@
-import { parseExchangeRates, parseExchangRate } from "./rates";
+import { parseExchangeRates, parseExchangeRate } from "./rates";
 
 describe("exchange rates api", () => {
   const mockResponse = `07.01.2022 #5
@@ -44,7 +44,7 @@ describe("exchange rates api", () => {
   });
 
   it("parses single exchange rate", () => {
-    const rate = parseExchangRate("EMU|euro|1|EUR|24,440", [
+    const rate = parseExchangeRate("EMU|euro|1|EUR|24,440", [
       "země",
       "měna",
       "množství",
@@ -62,7 +62,7 @@ describe("exchange rates api", () => {
 
   it("fails parsing single exchange rate", () => {
     expect(() =>
-      parseExchangRate("EMU|euro|1|EUR|24,440", [
+      parseExchangeRate("EMU|euro|1|EUR|24,440", [
         "země",
         "měna",
         "množství",

@@ -35,7 +35,7 @@ export function getNumberByColumn(
   return num;
 }
 
-export function parseExchangRate(
+export function parseExchangeRate(
   line: string,
   columns: string[]
 ): IExchangeRate {
@@ -63,7 +63,7 @@ export function parseExchangeRates(text: string): IExchangeRate[] {
 
   return lines
     .filter((line) => line.length > 2)
-    .map((line) => parseExchangRate(line, cols));
+    .map((line) => parseExchangeRate(line, cols));
 }
 
 async function fetchExchangeRates(): Promise<IExchangeRate[]> {
