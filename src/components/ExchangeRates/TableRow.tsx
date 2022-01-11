@@ -8,6 +8,10 @@ const TableCell = Styled.td`
   padding: 4px;
 `;
 
+const Rate = Styled.div`
+  text-align: right;
+`;
+
 interface TableRowProps {
   amount: number;
   code: string;
@@ -22,7 +26,9 @@ export function TableRow({ amount, code, country, rate }: TableRowProps) {
         <span>{code}</span>&nbsp; (<em>{country}</em>)
       </TableCell>
       <TableCell>{amount}</TableCell>
-      <TableCell>{rate}</TableCell>
+      <TableCell>
+        <Rate>{rate}</Rate>
+      </TableCell>
     </TableRowContainer>
   );
 }

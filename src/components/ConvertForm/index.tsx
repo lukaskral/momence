@@ -1,30 +1,18 @@
 import React, { useCallback, useState } from "react";
-import { Field, Formik, FormikErrors, ErrorMessage } from "formik";
+import { Formik, FormikErrors } from "formik";
 import Styled from "styled-components";
 
 import { TCurrency, IExchangeRate } from "../../models";
-
-const FormContainer = Styled.div`
-    border: solid 1px #ccc;
-    border-radius: 10px;
-    background: #eee;
-    padding: 10px;
-    margin: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-`;
-
-const Button = Styled.button`
-    font-size: 1.3em;
-    background: white;
-    border: solid 1px black;
-    border-radius: 5px;
-`;
+import { Button } from "../Common/Button";
+import { Form, Label, SelectField, TextField } from "../Common/Form";
 
 const Result = Styled.span`
-    font-size: 1.3em;
-    font-weight: bold;
-    text-align: right;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: right;
+  height: 40px;
+  flex-grow: 1;
+  justify-content: center;
 `;
 
 interface ConvertFormProps {
@@ -79,31 +67,31 @@ export function ConvertForm({ rates, currencies }: ConvertFormProps) {
       onSubmit={onSubmit}
     >
       {({ submitForm }) => (
-        <FormContainer>
-          <label>
-            <Field name="value" /> <span>CZK</span>{" "}
-            <ErrorMessage name="value" />
-          </label>
-          <label>
+        <Form>
+          <Label>
+            <TextField name="value" /> <span>CZK</span>{" "}
+          </Label>
+          <Label>
             convert to&nbsp;
-            <Field as="select" name="currency">
+            <SelectField name="currency">
               {currencies.map((currency) => (
                 <option key={currency} value={currency}>
                   {currency}
                 </option>
               ))}
-            </Field>
-            <ErrorMessage name="currency" />
-          </label>
+            </SelectField>
+          </Label>
 
           <Button onClick={submitForm}>Convert</Button>
 
           <Result>
-            {convertedValue
-              ? `${convertedValue.amount.toFixed(2)} ${convertedValue.currency}`
-              : ""}
+            {convertedValue ? (
+              `${convertedValue.amount.toFixed(2)} ${convertedValue.currency}`
+            ) : (
+              <>&nbsp;</>
+            )}
           </Result>
-        </FormContainer>
+        </Form>
       )}
     </Formik>
   );

@@ -6,11 +6,15 @@ import { TableRow } from "./TableRow";
 const Table = Styled.table`
     width: 100%;
     font-size: 1.3em;
+    border-collapse:collapse;
+    margin-top: 20px;
 `;
 
 const HeaderCell = Styled.th`
     padding: 4px;
-    text-align: left;
+    justify: center;
+    border-bottom: solid 1px #312054;
+  
 `;
 
 interface IExchangeRatesProps {
